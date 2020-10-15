@@ -1,6 +1,6 @@
 package fr.demos.models;
 
-import java.awt.Point;
+
 import java.util.Scanner;
 
 

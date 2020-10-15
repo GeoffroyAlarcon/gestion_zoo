@@ -1,14 +1,28 @@
 package fr.demos.models;
 
 public class Chien extends Animal {
-	String name;
 	String cri = "ouah, ouah";
 
-	public Chien(String name, boolean vivant, int age, String name2) {
+	public Chien(String name, boolean vivant, int age) {
 		super(name, vivant, age);
-		name = name2;
+	
 		this.setAgeMaxi(80);
 	}
+	
+	
+	
+	public String getCri() {
+		return cri;
+	}
+
+
+
+	public void setCri(String cri) {
+		this.cri = cri;
+	}
+
+
+
 	public void vieillir() {
 		if (this.isVivant() == false) {
 			System.out.println(getName() + " est décédé");

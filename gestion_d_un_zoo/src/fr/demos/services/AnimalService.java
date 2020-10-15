@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import fr.demos.models.Animal;
 
 public class AnimalService {
-	private ArrayList<Animal> tableauAnimal = new ArrayList();;
+	private ArrayList<Animal> tableauAnimal = new ArrayList();
 	private String directeur;
 
 	public AnimalService(ArrayList<Animal> tableauAnimal) {
@@ -17,7 +17,7 @@ public class AnimalService {
 		super();
 	}
 
-	public void addAniaml(Animal animal) {
+	public void addAnimal(Animal animal) {
 		tableauAnimal.add(animal);
 	}
 
@@ -25,15 +25,38 @@ public class AnimalService {
 
 		for (int i = 0; i < tableauAnimal.size(); i++) {
 			Animal findAnimal = tableauAnimal.get(i);
-	
-				findAnimal.viellir();
-				
+
+			findAnimal.vieillir();
+
+		}
+		for (int i = 0; i < tableauAnimal.size(); i++) {
+			Animal findAnimal = tableauAnimal.get(i);
+
+			if (findAnimal.isVivant() == false) {
+				tableauAnimal.remove(findAnimal);
+			}
 
 		}
 	}
 
 	public ArrayList<Animal> findallAnimal() {
 		return tableauAnimal;
+	}
+
+	public void crier() {
+
+		for (int i = 0; i < tableauAnimal.size(); i++) {
+			Animal findAnimal = tableauAnimal.get(i);
+
+			findAnimal.crier();
+
+		}
+	}
+
+	public void mourrir(Animal animal) {
+		tableauAnimal.remove(animal);
+		System.out.println(animal.getName() + "vient de mourrir !");
+		animal.setVivant(false);
 	}
 
 	@Override

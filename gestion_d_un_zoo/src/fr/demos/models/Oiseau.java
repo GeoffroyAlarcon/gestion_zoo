@@ -8,7 +8,16 @@ public class Oiseau extends Animal {
 		this.setAgeMaxi(10);
 	}
 
+	public String getCri() {
+		return cri;
+	}
+
+	public void setCri(String cri) {
+		this.cri = cri;
+	}
+
 	public void vieillir() {
+
 		if (this.isVivant() == false) {
 			System.out.println(getName() + " est décédé");
 
@@ -22,7 +31,6 @@ public class Oiseau extends Animal {
 			this.setVivant(false);
 		}
 	}
-
 
 	public void crier() {
 		if (this.isVivant() == false) {

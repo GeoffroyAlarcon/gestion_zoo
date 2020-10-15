@@ -16,8 +16,6 @@ public class Animal {
 	public Animal() {
 	}
 
-	
-
 	public String getName() {
 		return name;
 	}
@@ -49,7 +47,13 @@ public class Animal {
 	public void setAgeMaxi(int ageMaxi) {
 		this.ageMaxi = ageMaxi;
 	}
-	public void viellir() {
+
+	public void crier() {
+
+	}
+
+	public void vieillir() {
+
 	}
 
 	@Override
